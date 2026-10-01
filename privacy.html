@@ -52,6 +52,8 @@
 			<td>Granting the in-game reward for a watched ad and preventing abuse.</td></tr>
 		<tr><td><strong>Reminder data</strong>: push notification token, language, time zone (UTC offset), the hour you usually solve the daily puzzle, your current streak, whether reminders are on, date of the last reminder</td>
 			<td>Sending at most one daily-puzzle reminder a day, at a time that suits you, in your language — only if you turned reminders on.</td></tr>
+		<tr><td><strong>Purchase records</strong>: product ID, a hash of the Google Play purchase token, purchase time and your player ID — no payment details</td>
+			<td>Checking with Google Play that a purchase is genuine, granting it exactly once and preventing fraud.</td></tr>
 		<tr><td><strong>Email address and Google account ID</strong> — only if you choose to sign in with Google</td>
 			<td>Stored by our authentication service (Supabase Auth) to link your progress to your Google account so you can restore it. Not shown to other players.</td></tr>
 	</table></div>
@@ -80,7 +82,7 @@
 	signing in.</p>
 	<h3>Google Play (purchases)</h3>
 	<p>In-app purchases are processed by Google Play. We only learn which products you own (for
-	example “remove ads”); we never receive or store your payment details.</p>
+	example “remove ads”) and verify the purchase token with Google; we never receive or store your payment details.</p>
 
 	<h2>4. Who we share data with</h2>
 	<ul>
@@ -162,6 +164,8 @@
 			<td>Выдача награды за просмотр и защита от злоупотреблений.</td></tr>
 		<tr><td><strong>Данные для напоминаний</strong>: push-токен, язык, часовой пояс (смещение от UTC), час, в который вы обычно решаете задачу дня, текущая серия, включены ли напоминания, дата последнего напоминания</td>
 			<td>Не больше одного напоминания о задаче дня в сутки, в удобное время и на вашем языке — только если вы включили напоминания.</td></tr>
+		<tr><td><strong>Записи о покупках</strong>: ID товара, хэш токена покупки Google Play, время покупки и ваш ID игрока — без платёжных данных</td>
+			<td>Проверка в Google Play, что покупка настоящая, однократное зачисление и защита от мошенничества.</td></tr>
 		<tr><td><strong>Адрес почты и ID аккаунта Google</strong> — только если вы входите через Google</td>
 			<td>Хранятся в системе входа (Supabase Auth), чтобы связать прогресс с аккаунтом Google и восстановить его. Другим игрокам не показываются.</td></tr>
 	</table></div>
@@ -189,7 +193,7 @@
 	<p>Если вы привязываете аккаунт Google, Google передаёт нам адрес почты и ID аккаунта для входа.</p>
 	<h3>Google Play (покупки)</h3>
 	<p>Покупки в игре обрабатывает Google Play. Мы узнаём только, какие товары у вас есть (например,
-	«без рекламы»); платёжные данные мы не получаем и не храним.</p>
+	«без рекламы»), и проверяем токен покупки в Google; платёжные данные мы не получаем и не храним.</p>
 
 	<h2>4. Кому передаются данные</h2>
 	<ul>
